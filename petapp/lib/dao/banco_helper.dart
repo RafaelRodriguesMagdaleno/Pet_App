@@ -52,7 +52,7 @@ class BancoHelper {
     return sql.openDatabase(
       'petapp.db',
       version: 1,
-      // onCreate só é chamado UMA VEZ: quando o arquivo ainda não existe
+      // onCreate só é chamado uma vez: quando o arquivo ainda não existe
       onCreate: (db, version) async {
         await criarTabelas(db);
       },

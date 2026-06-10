@@ -18,7 +18,7 @@ class PerfilDAO {
     };
   }
 
-  // Salva o perfil: insere se não existe, atualiza se já existe
+  // Salva o perfil insere se não existe, atualiza se já existe
   static Future<void> salvarPerfil(
     String nome,
     String telefone,

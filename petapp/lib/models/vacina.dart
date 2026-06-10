@@ -12,7 +12,7 @@ class Vacina {
     required this.nome,
     required this.data,
   });
-
+// Construtor de fábrica para criar uma instância de Vacina a partir de um Map.
   factory Vacina.fromMap(Map<String, dynamic> map) {
     return Vacina(
       id: map['id'],
@@ -24,7 +24,7 @@ class Vacina {
       ), // converte o texto "2025-06-01" em DateTime
     );
   }
-
+// Converte a instância atual de Vacina para um Map<String, dynamic>.
   Map<String, dynamic> toMap() {
     return {
       'petId': petId,

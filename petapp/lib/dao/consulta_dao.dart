@@ -1,7 +1,7 @@
 import '../models/consulta.dart';
 import 'banco_helper.dart';
 
-// ConsultaDAO: operações de banco para a tabela "consultas".
+// ConsultaDAO: operações de banco para a tabela consultas.
 class ConsultaDAO {
 
   static Future<int> incluirConsulta(Consulta consulta) async {
@@ -15,7 +15,7 @@ class ConsultaDAO {
     final maps = await banco.query('consultas', orderBy: 'data');
     return maps.map((map) => Consulta.fromMap(map)).toList();
   }
-
+// Método para excluir uma consulta específica do banco de dados pelo seu ID
   static Future<bool> excluirConsulta(int id) async {
     final banco = await BancoHelper.abrirBanco();
     try {

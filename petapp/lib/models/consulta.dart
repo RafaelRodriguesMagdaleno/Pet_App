@@ -14,15 +14,15 @@ class Consulta {
     required this.data,
     required this.motivo,
   });
-
+  // Construtor de fábrica para criar uma instância de Consulta a partir de um Map.
   factory Consulta.fromMap(Map<String, dynamic> map) {
     return Consulta(
-      id: map['id'],
-      petId: map['petId'],
-      petNome: map['petNome'] ?? '',
-      veterinario: map['veterinario'] ?? '',
-      data: DateTime.parse(map['data']),
-      motivo: map['motivo'] ?? '',
+      id: map['id'], //Id da consulta
+      petId: map['petId'], //Id do pet
+      petNome: map['petNome'] ?? '', //Nome do pet
+      veterinario: map['veterinario'] ?? '',//Nome do veterinario
+      data: DateTime.parse(map['data']),//Data da consulta
+      motivo: map['motivo'] ?? '',//Motivo da consulta
     );
   }
 
